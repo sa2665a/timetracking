@@ -12,6 +12,7 @@ Project.create!(name:'Time tracking app')
 
 Project.create!(name:'Recipes', description: 'Track my favorite recipes')
 
-for i in 1..10
-	Project.create!(name:'Project number #{i}', description: 'This is the description')
+(1..10).each do |i|
+	Project.create!(name: "Project number #{i}", description: "This is the description")
 end
+

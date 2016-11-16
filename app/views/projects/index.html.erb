@@ -1,6 +1,6 @@
 <ul>
 	<% @projects.each do |project| %>
-	<li> <%= project.name %> 
+	<li> <%= link_to project.name, {action: "show", id: project.id} %> 
 		<% if project.description != nil %> - <%= project.description %> </li>
 		<%end%>
 	<%end%>
