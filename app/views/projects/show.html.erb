@@ -2,5 +2,9 @@
 
 <p><%=@my_project.description%></p>
 
+<%= link_to "Time Entry", "/projects/#{@my_project.id}/time_entries" %>
+
+
 <%= link_to "Home", "/" %> <br>
 <%= link_to "Projects", "/projects" %>
+

@@ -6,13 +6,17 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Project.create!(name:'Ironhack', description: 'Ironhack is a ...')
+# Project.create!(name:'Ironhack', description: 'Ironhack is a ...')
 
-Project.create!(name:'Time tracking app')
+# Project.create!(name:'Time tracking app')
 
-Project.create!(name:'Recipes', description: 'Track my favorite recipes')
+# Project.create!(name:'Recipes', description: 'Track my favorite recipes')
+
+
 
 (1..10).each do |i|
-	Project.create!(name: "Project number #{i}", description: "This is the description")
+	project= Project.create!(name: "Project number #{i}", description: "This is the description")
+	project.time_entries.create(minutes: rand(1..60), hours: rand(0..2))
+
 end
 
